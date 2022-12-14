@@ -16,15 +16,16 @@ function scope(){
     // Validando dados dos inputs
     function validatingData(pv, av){
         if(pv != "" && av != ""){
-            return true
+            c = pv / (av ** 2)
+            return Number.isNaN(c)
         } else{
-            return false
+            return true
         }
     }
 
     // Calculando o IMC
     function calcImc(pv, av){
-        let imc = pv / (av ** 2)
+        imc = pv / (av ** 2)
         let resultado
 
         if(imc < 18.5){
@@ -49,11 +50,11 @@ function scope(){
         imc = p.value / (a.value ** 2)
 
         if(bl == true){
-            div.classList = "resultado-s"
-            div.textContent = `Seu IMC é ${imc.toFixed(2)} (${calcImc(p.value, a.value)})`
-        } else{
             div.classList = "resultado-n"
             div.textContent = `Dados inválidos!`
+        } else{
+            div.classList = "resultado-s"
+            div.textContent = `Seu IMC é ${imc.toFixed(2)} (${calcImc(p.value, a.value)})`
         }
     }
 
