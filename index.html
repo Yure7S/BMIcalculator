@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modelo Front-End</title>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <section class="content">
+            <h1>Cálculo de IMC</h1>
+            <form id="formulario" action="#">
+                <label for="p">Peso: (em kg)</label>
+                <input id="p" type="text" placeholder="ex: 75">
+                <label for="a">Altura: (em m)</label>
+                <input id="a" type="text" placeholder="ex: 1.70">
+                <input type="submit" value="Calcular">
+            </form>
+            <div id="resultado"></div>
+        </section>
+    </main>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
